@@ -1,5 +1,6 @@
 package com.example.ElielProva.Models;
 
+import com.example.ElielProva.Enums.EstudanteEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,7 @@ public class EstudanteModel {
     private String nome;
     private String email;
     private int idade;
+    private EstudanteEnum aprovacao;
 
     public EstudanteModel(){
     }
@@ -47,5 +49,13 @@ public class EstudanteModel {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public EstudanteEnum getAprovacao() {
+        return aprovacao;
+    }
+
+    public void setAprovacao(EstudanteEnum aprovvacao) {
+        this.aprovacao = aprovvacao;
     }
 }
