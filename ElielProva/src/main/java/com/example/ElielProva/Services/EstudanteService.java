@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EstudanteService {
@@ -20,6 +21,10 @@ public class EstudanteService {
 
     public List<EstudanteModel> findALL(){
         return estudanteRepository.findAll();
+    }
+
+    public Optional<EstudanteModel> findId(Long id){
+        return estudanteRepository.findById(id);
     }
 
     public void deletarEstudante(Long id){
