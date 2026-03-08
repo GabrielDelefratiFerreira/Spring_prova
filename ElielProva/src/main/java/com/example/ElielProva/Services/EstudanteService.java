@@ -30,4 +30,10 @@ public class EstudanteService {
     public void deletarEstudante(Long id){
         estudanteRepository.deleteById(id);
     }
+
+    public EstudanteModel atualizar(Long id, EstudanteModel estudanteModel){
+        EstudanteModel model = estudanteRepository.findById(id).get();
+
+        return estudanteRepository.save(model);
+    }
 }
